@@ -19,4 +19,17 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
+print type(enron_data)
+print len(enron_data)
+
+#print enron_data
+
+print len(enron_data['METTS MARK'])
+count = 0
+for key in enron_data:
+	print key
+	if (enron_data[key]["poi"]==1):
+		count +=1
+print count
+
 
